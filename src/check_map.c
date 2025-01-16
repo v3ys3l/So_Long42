@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 00:51:46 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 01:58:47 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/16 03:46:13 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ static int	start_dfs_and_validate_position(t_game *game)
 		return (0);
 	}
 	dfs(game->player_x, game->player_y, game);
-	return (game->coins_counter - 1 == game->total_coins);
+	return (game->coins_counter -1 == game->total_coins);
 }
 
 int	allocate_and_start_dfs(t_game *game)

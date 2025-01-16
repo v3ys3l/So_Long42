@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 00:05:25 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/15 16:35:36 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/16 03:31:40 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	load_images(t_game *game)
 			&img_width, &img_height);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx, "Sprites/cave.xpm",
 			&img_width, &img_height);
-	game->img_player = mlx_xpm_file_to_image(game->mlx, "Sprites/Player.xpm",
+	game->img_player = mlx_xpm_file_to_image(game->mlx, "Sprites/player.xpm",
 			&img_width, &img_height);
 	if (!game->img_wall || !game->img_floor || !game->img_player
 		|| !game->img_coin || !game->img_exit)

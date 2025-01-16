@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 01:51:19 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 01:50:37 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/16 03:47:00 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@ static void	update_game_state(t_game *game, int new_x, int new_y,
 		{
 			game->coins_counter++;
 			ft_printf("coin: %d\n", game->coins_counter);
+			ft_printf("total coin: %d\n", game->total_coins);
 		}
 	}
-	if ((game->coins_counter == game->total_coins - 1) && move_result == 2)
+	if ((game->coins_counter == game->total_coins) && move_result == 2)
 	{
 		ft_printf("\nCongratulations! You won!\n");
 		game_exit(game);
@@ -41,6 +42,7 @@ static void	update_game_state(t_game *game, int new_x, int new_y,
 static void	process_move(t_game *game, int keycode, int new_x, int new_y)
 {
 	int	move_result;
+
 
 	move_result = check_move(game, new_x, new_y);
 	if (keycode == KEY_W || keycode == KEY_A || keycode == KEY_S
@@ -58,7 +60,6 @@ int	handle_input(int keycode, t_game *game)
 
 	new_x = game->player_x;
 	new_y = game->player_y;
-	game->coins_counter = 0;
 	if (keycode == KEY_ESC)
 		return (ft_printf("\nGame closed by ESC key.\n"), game_exit(game));
 	if (keycode == KEY_W)

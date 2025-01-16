@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 01:27:01 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 01:54:49 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/16 03:46:35 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int	check_accessibility(t_game *game)
 {
 	if (!allocate_and_start_dfs(game))
 		return (0);
+	game->coins_counter = 0;
 	if (!check_map_and_free(game))
 		return (0);
 	return (1);

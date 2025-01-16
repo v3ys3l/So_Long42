@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 00:05:29 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 01:07:37 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/16 03:38:07 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ int	main(int argc, char **argv)
 	t_game	game;
 
 	game = (t_game){0};
-	game.move_steps = 0;
 	if (argc != 2)
 	{
 		ft_printf("You must specify the map file.\n");
