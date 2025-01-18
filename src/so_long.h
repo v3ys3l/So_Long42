@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 00:05:31 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 03:36:33 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/18 17:05:29 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 # include <stdlib.h>
 
 # define TILE_SIZE 64
-# define KEY_W 119     // W tuşu
-# define KEY_A 97      // A tuşu
-# define KEY_S 115     // S tuşu
-# define KEY_D 100     // D tuşu
-# define KEY_ESC 65307 // ESC tuşu
-# define KEY_X 17      // ekrandaki X tuşu
+# define KEY_W 119
+# define KEY_A 97
+# define KEY_S 115
+# define KEY_D 100
+# define KEY_ESC 65307
+# define WINDOW_X 17
 
 typedef struct s_game
 {

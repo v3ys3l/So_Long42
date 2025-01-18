@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 04:10:36 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 00:48:09 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/18 11:01:31 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*get_next_line(int fd)
 	char		*line;
 	static char	*buffer;
 
-	if (fd == GNL_CLEAR)
+	if (fd == -1)
 	{
 		if (buffer)
 		{

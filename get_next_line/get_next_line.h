@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 04:10:43 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 00:54:52 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/18 11:01:05 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-# define GNL_CLEAR -42
 
 size_t	ft_strlen(char *str);
 int		ft_strchr(char *s);

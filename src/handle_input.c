@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 01:51:19 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 03:47:00 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/18 16:32:03 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ static void	process_move(t_game *game, int keycode, int new_x, int new_y)
 {
 	int	move_result;
 
-
 	move_result = check_move(game, new_x, new_y);
 	if (keycode == KEY_W || keycode == KEY_A || keycode == KEY_S
 		|| keycode == KEY_D)
@@ -53,7 +52,7 @@ static void	process_move(t_game *game, int keycode, int new_x, int new_y)
 	}
 }
 
-int	handle_input(int keycode, t_game *game)
+int	handle_input(int keycode, t_game *game)//
 {
 	int	new_x;
 	int	new_y;

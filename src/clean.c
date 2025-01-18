@@ -6,7 +6,7 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 18:20:51 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 01:51:01 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/18 13:05:07 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "../minilibx-linux/mlx.h"
 #include "./so_long.h"
 
-void	ft_clean_images(t_game *game)
+static void	ft_clean_images(t_game *game)
 {
 	if (game->img_coin)
 	{
@@ -43,7 +43,7 @@ void	ft_clean_images(t_game *game)
 	}
 }
 
-void	ft_clean_map_and_window(t_game *game)
+static void	ft_clean_map_and_window(t_game *game)
 {
 	int	i;
 
@@ -66,7 +66,7 @@ void	ft_clean_map_and_window(t_game *game)
 	}
 }
 
-void	ft_clean_display_and_visited(t_game *game)
+static void	ft_clean_display_and_visited(t_game *game)
 {
 	int	i;
 

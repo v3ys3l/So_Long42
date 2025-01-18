@@ -6,14 +6,14 @@
 /*   By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 01:45:09 by vbicer            #+#    #+#             */
-/*   Updated: 2025/01/16 01:05:39 by vbicer           ###   ########.fr       */
+/*   Updated: 2025/01/18 13:05:27 by vbicer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf/ft_printf.h"
 #include "so_long.h"
 
-void	draw_tile(t_game *game, int x, int y, char tile)
+static void	draw_tile(t_game *game, int x, int y, char tile)
 {
 	mlx_put_image_to_window(game->mlx, game->win, game->img_floor, x
 		* TILE_SIZE, y * TILE_SIZE);

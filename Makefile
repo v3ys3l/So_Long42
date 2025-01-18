@@ -6,7 +6,7 @@
 #    By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/13 18:15:52 by vbicer            #+#    #+#              #
-#    Updated: 2025/01/16 02:40:27 by vbicer           ###   ########.fr        #
+#    Updated: 2025/01/18 18:30:33 by vbicer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,10 +40,6 @@ OBJS = $(SRCS:.c=.o)
 all: libs $(NAME)
 
 
-libs:
-	make -C ./ft_printf
-	make -C ./get_next_line
-
 
 $(NAME): $(OBJS)
 	$(CC) $(OBJS) $(LIBS) $(MLX) -o $(NAME)
@@ -51,6 +47,11 @@ $(NAME): $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+libs:
+	make -C ./ft_printf
+	make -C ./get_next_line
+	make -C ./minilibx-linux
 
 
 clean:
