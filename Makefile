@@ -5,29 +5,36 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vbicer <vbicer@student.42kocaeli.com.tr    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/02/24 16:44:23 by vbicer            #+#    #+#              #
-#    Updated: 2025/02/24 17:29:38 by vbicer           ###   ########.fr        #
+#    Created: 2025/01/13 18:15:52 by vbicer            #+#    #+#              #
+#    Updated: 2025/01/18 18:30:33 by vbicer           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap
+NAME = so_long
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
-LIBS = -L./libft -lft
+CFLAGS = -Wall -Wextra -Werror -g
+LIBS = -L./ft_printf -lftprintf -L./get_next_line -lgetnext
+MLX = -Lminilibx-linux -lmlx -lX11 -lXext -lm
+
+SRC_DIR = src/
+
+SRC_FILES = check_map.c \
+			check_map2.c \
+			check_map3.c \
+			draw_map.c \
+			handle_input.c \
+			map_control.c \
+			read_map.c \
+			read_map2.c \
+			so_long_utils.c\
+			clean.c \
+			so_long.c
 
 
-SRCS = rules/push.c\
-       rules/reverse_rotate.c\
-       rules/rotate.c\
-       rules/swap.c\
-       free.c\
-       sort1.c\
-       sort2.c\
-       utils.c\
-       push_swap.c
+SRCS = $(addprefix $(SRC_DIR), $(SRC_FILES))
+
 
 OBJS = $(SRCS:.c=.o)
-
 
 
 all: libs $(NAME)
@@ -35,24 +42,28 @@ all: libs $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CC) $(OBJS) $(LIBS) -o $(NAME)
+	$(CC) $(OBJS) $(LIBS) $(MLX) -o $(NAME)
 
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 libs:
-	make -C ./libft
+	make -C ./ft_printf
+	make -C ./get_next_line
+	make -C ./minilibx-linux
+
 
 clean:
 	rm -f $(OBJS)
-	make clean -C ./libft
-
+	make clean -C ./ft_printf
+	make clean -C ./get_next_line
 
 
 fclean: clean
 	rm -f $(NAME)
-	make fclean -C ./libft
+	make fclean -C ./ft_printf
+	make fclean -C ./get_next_line
 
 
 re: fclean all
